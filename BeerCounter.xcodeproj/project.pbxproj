@@ -12,6 +12,11 @@
 		BA1AEA302297164C00E30BF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA1AEA2E2297164C00E30BF1 /* Main.storyboard */; };
 		BA1AEA322297164E00E30BF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA1AEA312297164E00E30BF1 /* Assets.xcassets */; };
 		BA1AEA352297164E00E30BF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA1AEA332297164E00E30BF1 /* LaunchScreen.storyboard */; };
+		BA1AEA3D22972DFB00E30BF1 /* StartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA1AEA3C22972DFB00E30BF1 /* StartViewController.xib */; };
+		BA1AEA3F2298651C00E30BF1 /* LastBears.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA1AEA3E2298651C00E30BF1 /* LastBears.xib */; };
+		BA1AEA4122986D8B00E30BF1 /* LastBearsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1AEA4022986D8B00E30BF1 /* LastBearsViewController.swift */; };
+		BA1AEA4322989C4100E30BF1 /* HomeViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1AEA4222989C4100E30BF1 /* HomeViewRouter.swift */; };
+		BA1AEA472298A0A200E30BF1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1AEA462298A0A200E30BF1 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		BA1AEA312297164E00E30BF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA1AEA342297164E00E30BF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA1AEA362297164E00E30BF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA1AEA3C22972DFB00E30BF1 /* StartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartViewController.xib; sourceTree = "<group>"; };
+		BA1AEA3E2298651C00E30BF1 /* LastBears.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LastBears.xib; sourceTree = "<group>"; };
+		BA1AEA4022986D8B00E30BF1 /* LastBearsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastBearsViewController.swift; sourceTree = "<group>"; };
+		BA1AEA4222989C4100E30BF1 /* HomeViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewRouter.swift; sourceTree = "<group>"; };
+		BA1AEA462298A0A200E30BF1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +64,35 @@
 		BA1AEA292297164C00E30BF1 /* BeerCounter */ = {
 			isa = PBXGroup;
 			children = (
+				BA1AEA442298A07C00E30BF1 /* Module */,
 				BA1AEA2A2297164C00E30BF1 /* AppDelegate.swift */,
 				BA1AEA2C2297164C00E30BF1 /* ViewController.swift */,
 				BA1AEA2E2297164C00E30BF1 /* Main.storyboard */,
 				BA1AEA312297164E00E30BF1 /* Assets.xcassets */,
 				BA1AEA332297164E00E30BF1 /* LaunchScreen.storyboard */,
 				BA1AEA362297164E00E30BF1 /* Info.plist */,
+				BA1AEA3C22972DFB00E30BF1 /* StartViewController.xib */,
+				BA1AEA3E2298651C00E30BF1 /* LastBears.xib */,
+				BA1AEA4022986D8B00E30BF1 /* LastBearsViewController.swift */,
 			);
 			path = BeerCounter;
+			sourceTree = "<group>";
+		};
+		BA1AEA442298A07C00E30BF1 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				BA1AEA452298A08A00E30BF1 /* Home */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		BA1AEA452298A08A00E30BF1 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				BA1AEA4222989C4100E30BF1 /* HomeViewRouter.swift */,
+				BA1AEA462298A0A200E30BF1 /* HomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +154,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA1AEA352297164E00E30BF1 /* LaunchScreen.storyboard in Resources */,
+				BA1AEA3D22972DFB00E30BF1 /* StartViewController.xib in Resources */,
+				BA1AEA3F2298651C00E30BF1 /* LastBears.xib in Resources */,
 				BA1AEA322297164E00E30BF1 /* Assets.xcassets in Resources */,
 				BA1AEA302297164C00E30BF1 /* Main.storyboard in Resources */,
 			);
@@ -135,6 +168,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA1AEA472298A0A200E30BF1 /* HomeViewController.swift in Sources */,
+				BA1AEA4322989C4100E30BF1 /* HomeViewRouter.swift in Sources */,
+				BA1AEA4122986D8B00E30BF1 /* LastBearsViewController.swift in Sources */,
 				BA1AEA2D2297164C00E30BF1 /* ViewController.swift in Sources */,
 				BA1AEA2B2297164C00E30BF1 /* AppDelegate.swift in Sources */,
 			);
@@ -283,6 +319,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JQ52M4QL3U;
 				INFOPLIST_FILE = BeerCounter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -300,6 +337,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JQ52M4QL3U;
 				INFOPLIST_FILE = BeerCounter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
