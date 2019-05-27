@@ -24,10 +24,8 @@ class ViewController: UIViewController {
         
         drinksToAddPicker.delegate = self
 
-
         let rightButton = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(goLastBears(_:)))
 
-    
         self.navigationItem.setRightBarButton(rightButton, animated: true)
         self.navigationItem.title = "Bear Counter"
     }
