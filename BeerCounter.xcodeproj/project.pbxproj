@@ -17,6 +17,9 @@
 		BA1AEA4122986D8B00E30BF1 /* LastBearsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1AEA4022986D8B00E30BF1 /* LastBearsViewController.swift */; };
 		BA1AEA4322989C4100E30BF1 /* HomeViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1AEA4222989C4100E30BF1 /* HomeViewRouter.swift */; };
 		BA1AEA472298A0A200E30BF1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1AEA462298A0A200E30BF1 /* HomeViewController.swift */; };
+		BED70F54229B0848000F347A /* HomeViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED70F53229B0848000F347A /* HomeViewPresenter.swift */; };
+		BED70F56229B10B1000F347A /* HomeViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED70F55229B10B1000F347A /* HomeViewInteractor.swift */; };
+		BED70F59229B5CE0000F347A /* LastBearsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED70F58229B5CE0000F347A /* LastBearsRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		BA1AEA4022986D8B00E30BF1 /* LastBearsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastBearsViewController.swift; sourceTree = "<group>"; };
 		BA1AEA4222989C4100E30BF1 /* HomeViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewRouter.swift; sourceTree = "<group>"; };
 		BA1AEA462298A0A200E30BF1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BED70F53229B0848000F347A /* HomeViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewPresenter.swift; sourceTree = "<group>"; };
+		BED70F55229B10B1000F347A /* HomeViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewInteractor.swift; sourceTree = "<group>"; };
+		BED70F58229B5CE0000F347A /* LastBearsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastBearsRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,7 @@
 		BA1AEA442298A07C00E30BF1 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				BED70F57229B5CC9000F347A /* LastBears */,
 				BA1AEA452298A08A00E30BF1 /* Home */,
 			);
 			path = Module;
@@ -91,8 +98,18 @@
 			children = (
 				BA1AEA4222989C4100E30BF1 /* HomeViewRouter.swift */,
 				BA1AEA462298A0A200E30BF1 /* HomeViewController.swift */,
+				BED70F53229B0848000F347A /* HomeViewPresenter.swift */,
+				BED70F55229B10B1000F347A /* HomeViewInteractor.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		BED70F57229B5CC9000F347A /* LastBears */ = {
+			isa = PBXGroup;
+			children = (
+				BED70F58229B5CE0000F347A /* LastBearsRouter.swift */,
+			);
+			path = LastBears;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,8 +187,11 @@
 			files = (
 				BA1AEA472298A0A200E30BF1 /* HomeViewController.swift in Sources */,
 				BA1AEA4322989C4100E30BF1 /* HomeViewRouter.swift in Sources */,
+				BED70F59229B5CE0000F347A /* LastBearsRouter.swift in Sources */,
 				BA1AEA4122986D8B00E30BF1 /* LastBearsViewController.swift in Sources */,
+				BED70F56229B10B1000F347A /* HomeViewInteractor.swift in Sources */,
 				BA1AEA2D2297164C00E30BF1 /* ViewController.swift in Sources */,
+				BED70F54229B0848000F347A /* HomeViewPresenter.swift in Sources */,
 				BA1AEA2B2297164C00E30BF1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
