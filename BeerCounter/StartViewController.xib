@@ -15,7 +15,6 @@
                 <outlet property="addBearsButton" destination="y3E-a9-Ouw" id="WZ0-Zt-gwl"/>
                 <outlet property="bearsDrank" destination="0yu-7J-mBC" id="Xhq-DR-eI5"/>
                 <outlet property="drinksToAddPicker" destination="0rM-Hq-saz" id="WdI-ju-xuC"/>
-                <outlet property="goLastBearsList" destination="q4d-Ak-UK7" id="0xH-r4-fMX"/>
                 <outlet property="view" destination="iN0-l3-epB" id="3fd-Oe-bRL"/>
             </connections>
         </placeholder>
@@ -55,33 +54,18 @@
                         <action selector="addBearsAction:" destination="-1" eventType="touchUpInside" id="PeP-w5-I8s"/>
                     </connections>
                 </button>
-                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Thn-dc-AlP">
-                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                    <items>
-                        <navigationItem title="Title" id="ybc-hS-yYj">
-                            <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="q4d-Ak-UK7">
-                                <connections>
-                                    <action selector="goLastBears:" destination="-1" id="TMn-3p-677"/>
-                                </connections>
-                            </barButtonItem>
-                        </navigationItem>
-                    </items>
-                </navigationBar>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="0rM-Hq-saz" firstAttribute="top" secondItem="MiP-x6-vdU" secondAttribute="bottom" constant="24" id="FTr-WU-gaP"/>
-                <constraint firstItem="Thn-dc-AlP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Jaw-Bh-9lr"/>
                 <constraint firstItem="MiP-x6-vdU" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="MLQ-MT-cSN"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="y3E-a9-Ouw" secondAttribute="trailing" constant="24" id="Qjg-Fx-0GA"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="MiP-x6-vdU" secondAttribute="trailing" constant="24" id="bQT-1B-aVX"/>
                 <constraint firstItem="y3E-a9-Ouw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="f62-8N-s1s"/>
                 <constraint firstItem="y3E-a9-Ouw" firstAttribute="top" secondItem="0rM-Hq-saz" secondAttribute="bottom" constant="24" id="jsy-TN-Wy5"/>
-                <constraint firstAttribute="trailing" secondItem="Thn-dc-AlP" secondAttribute="trailing" id="kvo-rq-yfn"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="0rM-Hq-saz" secondAttribute="trailing" constant="8" id="l7g-4O-wK1"/>
                 <constraint firstItem="0rM-Hq-saz" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="mY7-EF-9tf"/>
                 <constraint firstItem="0rM-Hq-saz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="s1G-d0-foj"/>
-                <constraint firstItem="Thn-dc-AlP" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="ttK-Do-lCh"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="47.826086956521742" y="109.82142857142857"/>

@@ -18,7 +18,14 @@ class LastBearsViewController: UIViewController {
         tableView.dataSource = self
         
     }
+
+    init() {
+        super.init(nibName: "LastBears", bundle: nil)
+    }
     
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }
 
 extension LastBearsViewController: UITableViewDelegate, UITableViewDataSource {
