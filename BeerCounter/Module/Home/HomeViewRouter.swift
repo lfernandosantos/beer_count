@@ -9,29 +9,25 @@
 import UIKit
 
 protocol HomeViewRouterInterface {
-    func openLastBearsList(navController: UINavigationController)
+    func openLastBearsList()
     
 }
 
 class HomeViewRouter: HomeViewRouterInterface {
 
+    var navigationController: UINavigationController?
 
-    func openLastBearsList(navController: UINavigationController) {
+    func openLastBearsList() {
         let lastView = LastBearsRouter.createModuleLastBearViewController()
-        navController.pushViewController(lastView, animated: true)
+        navigationController?.pushViewController(lastView, animated: true)
     }
     
-    static func createModuleUsingNavigationController() -> UINavigationController {
-        let router = HomeViewRouter()
-        let view = ViewController()
-        let presenter = HomeViewPresenter()
-        presenter.view = view
-        presenter.router = router
-        view.presenter = presenter
-
+    func createModuleUsingNavigationController() -> UINavigationController {
+        let interactor = HomeViewInteractor.shared
+        let controller = HomeViewController(router: self, interactor: interactor)
+        let view = HomeView(controller: controller)
         let navController = UINavigationController(rootViewController: view)
-
-        presenter.navController = navController
+        navigationController = navController
         return navController
     }
 }

@@ -9,19 +9,24 @@
 import Foundation
 
 protocol HomeViewInteractorInterface {
-    func saveBears(numberOfBear: Int)
-    func getBears() -> Int
+    func saveBeers(numberOfBeer: Int)
+    func getBeers() -> Int
 }
 
 class HomeViewInteractor: HomeViewInteractorInterface {
-    private let bearsKey = "bears"
+    private let beersKey = "beers"
 
-    func saveBears(numberOfBear: Int) {
-        let bears = getBears() + numberOfBear
-        UserDefaults.standard.set(bearsKey, forKey: bearsKey)
+    public static let shared: HomeViewInteractor = HomeViewInteractor()
+    
+    private init() { }
+    
+    internal func saveBeers(numberOfBeer: Int) {
+        let savedBeers = getBeers()
+        let beers = savedBeers + numberOfBeer
+        UserDefaults.standard.set(beers, forKey: beersKey)
     }
 
-    func getBears() -> Int {
-        return UserDefaults.standard.integer(forKey: bearsKey)
+    internal func getBeers() -> Int {
+        return UserDefaults.standard.integer(forKey: beersKey)
     }
 }

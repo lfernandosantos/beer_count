@@ -19,7 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
 
-        let navHomeView = HomeViewRouter.createModuleUsingNavigationController()
+        let homeViewRouter = HomeViewRouter()
+        let navHomeView = homeViewRouter.createModuleUsingNavigationController()
         window?.rootViewController = navHomeView
         window?.makeKeyAndVisible()
         

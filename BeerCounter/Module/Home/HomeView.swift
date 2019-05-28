@@ -8,7 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+
+protocol HomeViewProtocol: NewBaseViewController {
+    func updateBeersViews(numberBeerDrank: String)
+}
+
+class HomeView: NewBaseViewController, HomeViewProtocol {
 
     @IBOutlet weak var bearsDrank: UILabel!
     @IBOutlet weak var drinksToAddPicker: UIPickerView!
@@ -16,8 +21,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var goLastBearsList: UIBarButtonItem!
     
     let numberMaxCanAdd = 10
-
-    var presenter: HomeViewPresenterInterface!
+    
+    var controller: HomeViewControllerProtocol
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,12 +32,23 @@ class ViewController: UIViewController {
         let rightButton = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(goLastBears(_:)))
 
         self.navigationItem.setRightBarButton(rightButton, animated: true)
-        self.navigationItem.title = "Bear Counter"
+        
+        controller.viewDidLoad(view: self)
     }
 
-    init() {
-        super.init(nibName: "StartViewController", bundle: nil)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        controller.viewWillApper()
+    }
+    
+    init(controller: HomeViewControllerProtocol) {
+        self.controller = controller
+        super.init(nibName: "HomeView", bundle: nil)
 
+    }
+    
+    func updateBeersViews(numberBeerDrank: String) {
+        bearsDrank.text = numberBeerDrank
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -40,15 +56,17 @@ class ViewController: UIViewController {
     }
     
     @IBAction func addBearsAction(_ sender: Any) {
-        showAlertConfirmation(bears: String(drinksToAddPicker.selectedRow(inComponent: 0) + 1))
-
+        let numberOfBeers = drinksToAddPicker.selectedRow(inComponent: 0) + 1
+        controller.addBeers(numberOfBeers: numberOfBeers)
     }
+    
     @IBAction func goLastBears(_ sender: Any) {
-        presenter.goLastBears()
+       controller.goNewView(.lastBeers)
     }
 }
 
-extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+extension HomeView: UIPickerViewDelegate, UIPickerViewDataSource {
+    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return numberMaxCanAdd
     }
@@ -61,19 +79,5 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
-    
 }
 
-extension ViewController {
-    
-    func showAlertConfirmation(bears: String) {
-    let alertController = UIAlertController(title: nil, message: "Confirm number of drinks (\(bears))?", preferredStyle: .alert)
-
-        let confirmAction = UIAlertAction(title: "Confirm", style: .default) { (action) in
-            self.presenter.addBears(numberOfBears: self.drinksToAddPicker.selectedRow(inComponent: 0) + 1)
-        }
-        alertController.addAction( confirmAction)
-        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        present(alertController, animated: true, completion: nil)
-    }
-}

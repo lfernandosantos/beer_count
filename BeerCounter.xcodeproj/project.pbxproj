@@ -7,35 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA0CC40E229C602000767DDD /* NewBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0CC40D229C602000767DDD /* NewBaseViewController.swift */; };
+		BA0CC410229C639900767DDD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0CC40F229C639900767DDD /* HomeView.swift */; };
 		BA1AEA2B2297164C00E30BF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1AEA2A2297164C00E30BF1 /* AppDelegate.swift */; };
-		BA1AEA2D2297164C00E30BF1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1AEA2C2297164C00E30BF1 /* ViewController.swift */; };
 		BA1AEA302297164C00E30BF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA1AEA2E2297164C00E30BF1 /* Main.storyboard */; };
 		BA1AEA322297164E00E30BF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA1AEA312297164E00E30BF1 /* Assets.xcassets */; };
 		BA1AEA352297164E00E30BF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA1AEA332297164E00E30BF1 /* LaunchScreen.storyboard */; };
-		BA1AEA3D22972DFB00E30BF1 /* StartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA1AEA3C22972DFB00E30BF1 /* StartViewController.xib */; };
+		BA1AEA3D22972DFB00E30BF1 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA1AEA3C22972DFB00E30BF1 /* HomeView.xib */; };
 		BA1AEA3F2298651C00E30BF1 /* LastBears.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA1AEA3E2298651C00E30BF1 /* LastBears.xib */; };
 		BA1AEA4122986D8B00E30BF1 /* LastBearsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1AEA4022986D8B00E30BF1 /* LastBearsViewController.swift */; };
 		BA1AEA4322989C4100E30BF1 /* HomeViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1AEA4222989C4100E30BF1 /* HomeViewRouter.swift */; };
 		BA1AEA472298A0A200E30BF1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1AEA462298A0A200E30BF1 /* HomeViewController.swift */; };
-		BED70F54229B0848000F347A /* HomeViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED70F53229B0848000F347A /* HomeViewPresenter.swift */; };
 		BED70F56229B10B1000F347A /* HomeViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED70F55229B10B1000F347A /* HomeViewInteractor.swift */; };
 		BED70F59229B5CE0000F347A /* LastBearsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED70F58229B5CE0000F347A /* LastBearsRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA0CC40D229C602000767DDD /* NewBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBaseViewController.swift; sourceTree = "<group>"; };
+		BA0CC40F229C639900767DDD /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		BA1AEA272297164C00E30BF1 /* BeerCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeerCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA1AEA2A2297164C00E30BF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BA1AEA2C2297164C00E30BF1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BA1AEA2F2297164C00E30BF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BA1AEA312297164E00E30BF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA1AEA342297164E00E30BF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA1AEA362297164E00E30BF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BA1AEA3C22972DFB00E30BF1 /* StartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartViewController.xib; sourceTree = "<group>"; };
+		BA1AEA3C22972DFB00E30BF1 /* HomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
 		BA1AEA3E2298651C00E30BF1 /* LastBears.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LastBears.xib; sourceTree = "<group>"; };
 		BA1AEA4022986D8B00E30BF1 /* LastBearsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastBearsViewController.swift; sourceTree = "<group>"; };
 		BA1AEA4222989C4100E30BF1 /* HomeViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewRouter.swift; sourceTree = "<group>"; };
 		BA1AEA462298A0A200E30BF1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		BED70F53229B0848000F347A /* HomeViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewPresenter.swift; sourceTree = "<group>"; };
 		BED70F55229B10B1000F347A /* HomeViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewInteractor.swift; sourceTree = "<group>"; };
 		BED70F58229B5CE0000F347A /* LastBearsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastBearsRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -51,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA0CC40C229C5FFF00767DDD /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BA0CC40D229C602000767DDD /* NewBaseViewController.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		BA1AEA1E2297164C00E30BF1 = {
 			isa = PBXGroup;
 			children = (
@@ -70,14 +78,13 @@
 		BA1AEA292297164C00E30BF1 /* BeerCounter */ = {
 			isa = PBXGroup;
 			children = (
+				BA0CC40C229C5FFF00767DDD /* Common */,
 				BA1AEA442298A07C00E30BF1 /* Module */,
 				BA1AEA2A2297164C00E30BF1 /* AppDelegate.swift */,
-				BA1AEA2C2297164C00E30BF1 /* ViewController.swift */,
 				BA1AEA2E2297164C00E30BF1 /* Main.storyboard */,
 				BA1AEA312297164E00E30BF1 /* Assets.xcassets */,
 				BA1AEA332297164E00E30BF1 /* LaunchScreen.storyboard */,
 				BA1AEA362297164E00E30BF1 /* Info.plist */,
-				BA1AEA3C22972DFB00E30BF1 /* StartViewController.xib */,
 				BA1AEA3E2298651C00E30BF1 /* LastBears.xib */,
 				BA1AEA4022986D8B00E30BF1 /* LastBearsViewController.swift */,
 			);
@@ -96,9 +103,10 @@
 		BA1AEA452298A08A00E30BF1 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				BA1AEA3C22972DFB00E30BF1 /* HomeView.xib */,
+				BA0CC40F229C639900767DDD /* HomeView.swift */,
 				BA1AEA4222989C4100E30BF1 /* HomeViewRouter.swift */,
 				BA1AEA462298A0A200E30BF1 /* HomeViewController.swift */,
-				BED70F53229B0848000F347A /* HomeViewPresenter.swift */,
 				BED70F55229B10B1000F347A /* HomeViewInteractor.swift */,
 			);
 			path = Home;
@@ -171,7 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA1AEA352297164E00E30BF1 /* LaunchScreen.storyboard in Resources */,
-				BA1AEA3D22972DFB00E30BF1 /* StartViewController.xib in Resources */,
+				BA1AEA3D22972DFB00E30BF1 /* HomeView.xib in Resources */,
 				BA1AEA3F2298651C00E30BF1 /* LastBears.xib in Resources */,
 				BA1AEA322297164E00E30BF1 /* Assets.xcassets in Resources */,
 				BA1AEA302297164C00E30BF1 /* Main.storyboard in Resources */,
@@ -185,13 +193,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA0CC410229C639900767DDD /* HomeView.swift in Sources */,
 				BA1AEA472298A0A200E30BF1 /* HomeViewController.swift in Sources */,
 				BA1AEA4322989C4100E30BF1 /* HomeViewRouter.swift in Sources */,
 				BED70F59229B5CE0000F347A /* LastBearsRouter.swift in Sources */,
 				BA1AEA4122986D8B00E30BF1 /* LastBearsViewController.swift in Sources */,
 				BED70F56229B10B1000F347A /* HomeViewInteractor.swift in Sources */,
-				BA1AEA2D2297164C00E30BF1 /* ViewController.swift in Sources */,
-				BED70F54229B0848000F347A /* HomeViewPresenter.swift in Sources */,
+				BA0CC40E229C602000767DDD /* NewBaseViewController.swift in Sources */,
 				BA1AEA2B2297164C00E30BF1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
