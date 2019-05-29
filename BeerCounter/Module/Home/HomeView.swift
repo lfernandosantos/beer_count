@@ -9,7 +9,7 @@
 import UIKit
 
 protocol HomeViewProtocol: NewBaseViewController {
-    func updateBeersViews(numberBeerDrank: String, orders: [String])
+    func updateBeersViews(numberBeerDrank: String, orders: [String], totalPrice: String)
     func cleanOrder()
 }
 
@@ -20,7 +20,10 @@ class HomeView: NewBaseViewController, HomeViewProtocol {
     @IBOutlet weak var addBearsButton: UIButton!
     @IBOutlet weak var goLastBearsList: UIBarButtonItem!
     @IBOutlet weak var tableViewOrders: UITableView!
+    @IBOutlet weak var textFieldBeerPrice: UITextField!
+    @IBOutlet weak var labelTotalPrice: UILabel!
     
+    @IBOutlet weak var totalStackView: UIStackView!
     var orders: [String] = []
     
     let numberMaxCanAdd = 10
@@ -31,11 +34,13 @@ class HomeView: NewBaseViewController, HomeViewProtocol {
         super.viewDidLoad()
         
         drinksToAddPicker.delegate = self
+        textFieldBeerPrice.delegate = self
 
         let rightButton = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(goLastBears(_:)))
 
         self.navigationItem.setRightBarButton(rightButton, animated: true)
         
+        totalStackView.addBackground(color: .gray)
         controller.viewDidLoad(view: self)
     }
 
@@ -50,9 +55,9 @@ class HomeView: NewBaseViewController, HomeViewProtocol {
 
     }
     
-    func updateBeersViews(numberBeerDrank: String,
-                          orders: [String]) {
+    func updateBeersViews(numberBeerDrank: String, orders: [String], totalPrice: String) {
         bearsDrank.text = numberBeerDrank
+        labelTotalPrice.text = totalPrice
         self.orders = orders
         tableViewOrders.reloadData()
     }
@@ -89,6 +94,7 @@ extension HomeView: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
+
 }
 
 extension HomeView: UITableViewDataSource, UITableViewDelegate {
@@ -104,4 +110,21 @@ extension HomeView: UITableViewDataSource, UITableViewDelegate {
     }
     
     
+    
+}
+
+extension HomeView: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        controller.endEditing(textField.text)
+    }
+}
+
+
+extension UIStackView {
+    func addBackground(color: UIColor) {
+        let subView = UIView(frame: bounds)
+        subView.backgroundColor = color
+        subView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        insertSubview(subView, at: 0)
+    }
 }

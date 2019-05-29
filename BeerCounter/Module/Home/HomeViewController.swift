@@ -15,7 +15,7 @@ protocol HomeViewControllerProtocol {
     func addBeers(numberOfBeers: Int)
     func goNewView(_ viewToGo: ViewsToGo)
     func cleanOrder()
-    
+    func endEditing(_ text: String?)
 }
 
 enum ViewsToGo {
@@ -27,6 +27,8 @@ class HomeViewController: HomeViewControllerProtocol {
     let router: HomeViewRouterInterface
     let interactor: HomeViewInteractorInterface
     private var view: HomeViewProtocol?
+    
+    var priceBeer: Int = 0
     
     init(router: HomeViewRouterInterface, interactor: HomeViewInteractorInterface) {
         self.router = router
@@ -67,7 +69,9 @@ class HomeViewController: HomeViewControllerProtocol {
             return i
         }
         
-        self.view?.updateBeersViews(numberBeerDrank: String(beers), orders: itemList )
+        let totalCalculated = "\(priceBeer * beers)"
+        
+        self.view?.updateBeersViews(numberBeerDrank: String(beers), orders: itemList, totalPrice: totalCalculated )
     }
     
     func goNewView(_ viewToGo: ViewsToGo) {
@@ -79,6 +83,11 @@ class HomeViewController: HomeViewControllerProtocol {
     
     func cleanOrder() {
         interactor.cleanOrderDB()
+        updateViews()
+    }
+    
+    func endEditing(_ text: String?) {
+        priceBeer = Int(text ?? "0") ?? 0
         updateViews()
     }
 }
