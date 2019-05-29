@@ -8,9 +8,9 @@
 
 import UIKit
 
-
 protocol HomeViewProtocol: NewBaseViewController {
-    func updateBeersViews(numberBeerDrank: String)
+    func updateBeersViews(numberBeerDrank: String, orders: [String])
+    func cleanOrder()
 }
 
 class HomeView: NewBaseViewController, HomeViewProtocol {
@@ -19,6 +19,9 @@ class HomeView: NewBaseViewController, HomeViewProtocol {
     @IBOutlet weak var drinksToAddPicker: UIPickerView!
     @IBOutlet weak var addBearsButton: UIButton!
     @IBOutlet weak var goLastBearsList: UIBarButtonItem!
+    @IBOutlet weak var tableViewOrders: UITableView!
+    
+    var orders: [String] = []
     
     let numberMaxCanAdd = 10
     
@@ -47,8 +50,15 @@ class HomeView: NewBaseViewController, HomeViewProtocol {
 
     }
     
-    func updateBeersViews(numberBeerDrank: String) {
+    func updateBeersViews(numberBeerDrank: String,
+                          orders: [String]) {
         bearsDrank.text = numberBeerDrank
+        self.orders = orders
+        tableViewOrders.reloadData()
+    }
+    
+    @IBAction func cleanOrder() {
+        controller.cleanOrder()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -81,3 +91,17 @@ extension HomeView: UIPickerViewDelegate, UIPickerViewDataSource {
     }
 }
 
+extension HomeView: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return orders.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.textLabel?.text = orders[indexPath.row]
+        
+        return cell
+    }
+    
+    
+}

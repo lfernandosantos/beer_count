@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,6 +15,7 @@
                 <outlet property="addBearsButton" destination="y3E-a9-Ouw" id="WZ0-Zt-gwl"/>
                 <outlet property="bearsDrank" destination="0yu-7J-mBC" id="Xhq-DR-eI5"/>
                 <outlet property="drinksToAddPicker" destination="0rM-Hq-saz" id="WdI-ju-xuC"/>
+                <outlet property="tableViewOrders" destination="00O-mT-G76" id="C0f-qv-kkL"/>
                 <outlet property="view" destination="iN0-l3-epB" id="3fd-Oe-bRL"/>
             </connections>
         </placeholder>
@@ -45,23 +50,46 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3E-a9-Ouw">
                     <rect key="frame" x="24" y="517" width="366" height="34"/>
                     <inset key="contentEdgeInsets" minX="0.0" minY="8" maxX="0.0" maxY="8"/>
-                    <state key="normal" title="Button"/>
+                    <state key="normal" title="Add Beers"/>
                     <connections>
                         <action selector="addBearsAction:" destination="-1" eventType="touchUpInside" id="PeP-w5-I8s"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="00O-mT-G76">
+                    <rect key="frame" x="16" y="76" width="382" height="274.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Rkw-JT-jbY"/>
+                        <outlet property="delegate" destination="-1" id="Sl2-3v-HlX"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7J-8p-WZF">
+                    <rect key="frame" x="24" y="583" width="366" height="34"/>
+                    <inset key="contentEdgeInsets" minX="0.0" minY="8" maxX="0.0" maxY="8"/>
+                    <state key="normal" title="Clean"/>
+                    <connections>
+                        <action selector="cleanOrder" destination="-1" eventType="touchUpInside" id="llJ-if-5Mc"/>
                     </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="g7J-8p-WZF" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="48Z-PF-hzV"/>
                 <constraint firstItem="0rM-Hq-saz" firstAttribute="top" secondItem="MiP-x6-vdU" secondAttribute="bottom" constant="24" id="FTr-WU-gaP"/>
                 <constraint firstItem="MiP-x6-vdU" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="MLQ-MT-cSN"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="y3E-a9-Ouw" secondAttribute="trailing" constant="24" id="Qjg-Fx-0GA"/>
+                <constraint firstItem="MiP-x6-vdU" firstAttribute="top" secondItem="00O-mT-G76" secondAttribute="bottom" constant="8" id="Tm3-tC-fXc"/>
+                <constraint firstItem="00O-mT-G76" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="UFz-rs-jvJ"/>
+                <constraint firstItem="g7J-8p-WZF" firstAttribute="top" secondItem="y3E-a9-Ouw" secondAttribute="bottom" constant="32" id="Xr7-S7-G1s"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="MiP-x6-vdU" secondAttribute="trailing" constant="24" id="bQT-1B-aVX"/>
                 <constraint firstItem="y3E-a9-Ouw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="f62-8N-s1s"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="00O-mT-G76" secondAttribute="trailing" constant="16" id="h06-Df-6aP"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="g7J-8p-WZF" secondAttribute="trailing" constant="24" id="jEW-cx-ibZ"/>
                 <constraint firstItem="y3E-a9-Ouw" firstAttribute="top" secondItem="0rM-Hq-saz" secondAttribute="bottom" constant="24" id="jsy-TN-Wy5"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="0rM-Hq-saz" secondAttribute="trailing" constant="8" id="l7g-4O-wK1"/>
                 <constraint firstItem="0rM-Hq-saz" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="mY7-EF-9tf"/>
                 <constraint firstItem="0rM-Hq-saz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="s1G-d0-foj"/>
+                <constraint firstItem="00O-mT-G76" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="32" id="uQ0-Nk-Pu7"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="47.826086956521742" y="109.82142857142857"/>

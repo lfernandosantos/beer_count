@@ -14,6 +14,7 @@ protocol HomeViewControllerProtocol {
     func viewWillApper()
     func addBeers(numberOfBeers: Int)
     func goNewView(_ viewToGo: ViewsToGo)
+    func cleanOrder()
     
 }
 
@@ -55,8 +56,18 @@ class HomeViewController: HomeViewControllerProtocol {
     }
     
     func updateViews(){
-        let beers = String(interactor.getBeers())
-        self.view?.updateBeersViews(numberBeerDrank: beers)
+        var beers: Int = 0
+        let orders = interactor.getOrders()
+    
+        let itemList = orders.map { (item) -> String in
+            var i = Utils.getDateFormatted(date: item.date! as Date)
+            i += " - \(item.numberOfBeers)"
+            
+            beers += Int(item.numberOfBeers)
+            return i
+        }
+        
+        self.view?.updateBeersViews(numberBeerDrank: String(beers), orders: itemList )
     }
     
     func goNewView(_ viewToGo: ViewsToGo) {
@@ -64,5 +75,18 @@ class HomeViewController: HomeViewControllerProtocol {
         case .lastBeers:
             router.openLastBearsList()
         }
+    }
+    
+    func cleanOrder() {
+        interactor.cleanOrderDB()
+        updateViews()
+    }
+}
+
+class Utils {
+    static func getDateFormatted(date: Date) -> String {
+        let formater = DateFormatter()
+        formater.dateFormat = "[dd] HH : mm "
+        return formater.string(from: date)
     }
 }

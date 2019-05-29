@@ -18,6 +18,10 @@
 		BA1AEA4122986D8B00E30BF1 /* LastBearsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1AEA4022986D8B00E30BF1 /* LastBearsViewController.swift */; };
 		BA1AEA4322989C4100E30BF1 /* HomeViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1AEA4222989C4100E30BF1 /* HomeViewRouter.swift */; };
 		BA1AEA472298A0A200E30BF1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1AEA462298A0A200E30BF1 /* HomeViewController.swift */; };
+		BA9C705C229DBCF400B0AA3C /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9C705B229DBCF400B0AA3C /* PersistenceManager.swift */; };
+		BA9C705F229DBDE400B0AA3C /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA9C705D229DBDE400B0AA3C /* Database.xcdatamodeld */; };
+		BA9C7063229DBEDE00B0AA3C /* Order+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9C7061229DBEDE00B0AA3C /* Order+CoreDataClass.swift */; };
+		BA9C7064229DBEDE00B0AA3C /* Order+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9C7062229DBEDE00B0AA3C /* Order+CoreDataProperties.swift */; };
 		BED70F56229B10B1000F347A /* HomeViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED70F55229B10B1000F347A /* HomeViewInteractor.swift */; };
 		BED70F59229B5CE0000F347A /* LastBearsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED70F58229B5CE0000F347A /* LastBearsRouter.swift */; };
 /* End PBXBuildFile section */
@@ -36,6 +40,10 @@
 		BA1AEA4022986D8B00E30BF1 /* LastBearsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastBearsViewController.swift; sourceTree = "<group>"; };
 		BA1AEA4222989C4100E30BF1 /* HomeViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewRouter.swift; sourceTree = "<group>"; };
 		BA1AEA462298A0A200E30BF1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BA9C705B229DBCF400B0AA3C /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		BA9C705E229DBDE400B0AA3C /* Database.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Database.xcdatamodel; sourceTree = "<group>"; };
+		BA9C7061229DBEDE00B0AA3C /* Order+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Order+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BA9C7062229DBEDE00B0AA3C /* Order+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Order+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BED70F55229B10B1000F347A /* HomeViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewInteractor.swift; sourceTree = "<group>"; };
 		BED70F58229B5CE0000F347A /* LastBearsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastBearsRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,6 +86,7 @@
 		BA1AEA292297164C00E30BF1 /* BeerCounter */ = {
 			isa = PBXGroup;
 			children = (
+				BA9C705A229DBC7800B0AA3C /* Database */,
 				BA0CC40C229C5FFF00767DDD /* Common */,
 				BA1AEA442298A07C00E30BF1 /* Module */,
 				BA1AEA2A2297164C00E30BF1 /* AppDelegate.swift */,
@@ -110,6 +119,25 @@
 				BED70F55229B10B1000F347A /* HomeViewInteractor.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		BA9C705A229DBC7800B0AA3C /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				BA9C7060229DBDF400B0AA3C /* Entities */,
+				BA9C705B229DBCF400B0AA3C /* PersistenceManager.swift */,
+				BA9C705D229DBDE400B0AA3C /* Database.xcdatamodeld */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		BA9C7060229DBDF400B0AA3C /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				BA9C7061229DBEDE00B0AA3C /* Order+CoreDataClass.swift */,
+				BA9C7062229DBEDE00B0AA3C /* Order+CoreDataProperties.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		BED70F57229B5CC9000F347A /* LastBears */ = {
@@ -193,12 +221,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA9C7064229DBEDE00B0AA3C /* Order+CoreDataProperties.swift in Sources */,
 				BA0CC410229C639900767DDD /* HomeView.swift in Sources */,
 				BA1AEA472298A0A200E30BF1 /* HomeViewController.swift in Sources */,
 				BA1AEA4322989C4100E30BF1 /* HomeViewRouter.swift in Sources */,
 				BED70F59229B5CE0000F347A /* LastBearsRouter.swift in Sources */,
 				BA1AEA4122986D8B00E30BF1 /* LastBearsViewController.swift in Sources */,
+				BA9C7063229DBEDE00B0AA3C /* Order+CoreDataClass.swift in Sources */,
 				BED70F56229B10B1000F347A /* HomeViewInteractor.swift in Sources */,
+				BA9C705F229DBDE400B0AA3C /* Database.xcdatamodeld in Sources */,
+				BA9C705C229DBCF400B0AA3C /* PersistenceManager.swift in Sources */,
 				BA0CC40E229C602000767DDD /* NewBaseViewController.swift in Sources */,
 				BA1AEA2B2297164C00E30BF1 /* AppDelegate.swift in Sources */,
 			);
@@ -400,6 +432,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BA9C705D229DBDE400B0AA3C /* Database.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BA9C705E229DBDE400B0AA3C /* Database.xcdatamodel */,
+			);
+			currentVersion = BA9C705E229DBDE400B0AA3C /* Database.xcdatamodel */;
+			path = Database.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BA1AEA1F2297164C00E30BF1 /* Project object */;
 }
