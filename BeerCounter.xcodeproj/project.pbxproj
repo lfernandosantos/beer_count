@@ -22,9 +22,20 @@
 		BA9C705F229DBDE400B0AA3C /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA9C705D229DBDE400B0AA3C /* Database.xcdatamodeld */; };
 		BA9C7063229DBEDE00B0AA3C /* Order+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9C7061229DBEDE00B0AA3C /* Order+CoreDataClass.swift */; };
 		BA9C7064229DBEDE00B0AA3C /* Order+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9C7062229DBEDE00B0AA3C /* Order+CoreDataProperties.swift */; };
+		BA9C706C22A0853400B0AA3C /* BeerCounterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9C706B22A0853400B0AA3C /* BeerCounterUITests.swift */; };
 		BED70F56229B10B1000F347A /* HomeViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED70F55229B10B1000F347A /* HomeViewInteractor.swift */; };
 		BED70F59229B5CE0000F347A /* LastBearsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED70F58229B5CE0000F347A /* LastBearsRouter.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BA9C706E22A0853400B0AA3C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA1AEA1F2297164C00E30BF1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA1AEA262297164C00E30BF1;
+			remoteInfo = BeerCounter;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		BA0CC40D229C602000767DDD /* NewBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBaseViewController.swift; sourceTree = "<group>"; };
@@ -44,12 +55,22 @@
 		BA9C705E229DBDE400B0AA3C /* Database.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Database.xcdatamodel; sourceTree = "<group>"; };
 		BA9C7061229DBEDE00B0AA3C /* Order+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Order+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BA9C7062229DBEDE00B0AA3C /* Order+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Order+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BA9C706922A0853400B0AA3C /* BeerCounterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeerCounterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA9C706B22A0853400B0AA3C /* BeerCounterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerCounterUITests.swift; sourceTree = "<group>"; };
+		BA9C706D22A0853400B0AA3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BED70F55229B10B1000F347A /* HomeViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewInteractor.swift; sourceTree = "<group>"; };
 		BED70F58229B5CE0000F347A /* LastBearsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastBearsRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		BA1AEA242297164C00E30BF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA9C706622A0853400B0AA3C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -71,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				BA1AEA292297164C00E30BF1 /* BeerCounter */,
+				BA9C706A22A0853400B0AA3C /* BeerCounterUITests */,
 				BA1AEA282297164C00E30BF1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -79,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				BA1AEA272297164C00E30BF1 /* BeerCounter.app */,
+				BA9C706922A0853400B0AA3C /* BeerCounterUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,6 +163,15 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
+		BA9C706A22A0853400B0AA3C /* BeerCounterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BA9C706B22A0853400B0AA3C /* BeerCounterUITests.swift */,
+				BA9C706D22A0853400B0AA3C /* Info.plist */,
+			);
+			path = BeerCounterUITests;
+			sourceTree = "<group>";
+		};
 		BED70F57229B5CC9000F347A /* LastBears */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +200,24 @@
 			productReference = BA1AEA272297164C00E30BF1 /* BeerCounter.app */;
 			productType = "com.apple.product-type.application";
 		};
+		BA9C706822A0853400B0AA3C /* BeerCounterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA9C707022A0853400B0AA3C /* Build configuration list for PBXNativeTarget "BeerCounterUITests" */;
+			buildPhases = (
+				BA9C706522A0853400B0AA3C /* Sources */,
+				BA9C706622A0853400B0AA3C /* Frameworks */,
+				BA9C706722A0853400B0AA3C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA9C706F22A0853400B0AA3C /* PBXTargetDependency */,
+			);
+			name = BeerCounterUITests;
+			productName = BeerCounterUITests;
+			productReference = BA9C706922A0853400B0AA3C /* BeerCounterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -180,6 +230,10 @@
 				TargetAttributes = {
 					BA1AEA262297164C00E30BF1 = {
 						CreatedOnToolsVersion = 10.2.1;
+					};
+					BA9C706822A0853400B0AA3C = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = BA1AEA262297164C00E30BF1;
 					};
 				};
 			};
@@ -197,6 +251,7 @@
 			projectRoot = "";
 			targets = (
 				BA1AEA262297164C00E30BF1 /* BeerCounter */,
+				BA9C706822A0853400B0AA3C /* BeerCounterUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -211,6 +266,13 @@
 				BA1AEA3F2298651C00E30BF1 /* LastBears.xib in Resources */,
 				BA1AEA322297164E00E30BF1 /* Assets.xcassets in Resources */,
 				BA1AEA302297164C00E30BF1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA9C706722A0853400B0AA3C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,7 +298,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BA9C706522A0853400B0AA3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA9C706C22A0853400B0AA3C /* BeerCounterUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BA9C706F22A0853400B0AA3C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA1AEA262297164C00E30BF1 /* BeerCounter */;
+			targetProxy = BA9C706E22A0853400B0AA3C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BA1AEA2E2297164C00E30BF1 /* Main.storyboard */ = {
@@ -410,6 +488,42 @@
 			};
 			name = Release;
 		};
+		BA9C707122A0853400B0AA3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BeerCounterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = lfernandosantos.BeerCounterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BeerCounter;
+			};
+			name = Debug;
+		};
+		BA9C707222A0853400B0AA3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BeerCounterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = lfernandosantos.BeerCounterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BeerCounter;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -427,6 +541,15 @@
 			buildConfigurations = (
 				BA1AEA3A2297164E00E30BF1 /* Debug */,
 				BA1AEA3B2297164E00E30BF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA9C707022A0853400B0AA3C /* Build configuration list for PBXNativeTarget "BeerCounterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA9C707122A0853400B0AA3C /* Debug */,
+				BA9C707222A0853400B0AA3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
