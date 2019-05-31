@@ -6,16 +6,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BeerCounterUITests/BeerCounterUITests.swift"
-            timestampString = "580946765.918715"
+            timestampString = "581003404.411464"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "testExample()"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "tearDown()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

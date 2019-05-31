@@ -29,12 +29,17 @@ class BeerCounterUITests: XCTestCase {
     func testExample() {
         
         let app = XCUIApplication()
-        app.buttons["Add Beers"].tap()
-        app.alerts.buttons["Confirm"].tap()
+        let btn = app.buttons.element(matching: .button, identifier: "addbtn")
+        btn.tap()
+        print(btn)
+        
+        
+         app.alerts.buttons["Confirm"].tap()
         app.tables/*@START_MENU_TOKEN@*/.staticTexts["[29] 18 : 40  - 1"]/*[[".cells.staticTexts[\"[29] 18 : 40  - 1\"]",".staticTexts[\"[29] 18 : 40  - 1\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         
-        let tab = app.tables
-        print(app.tables.count)
+        let tab = app.buttons
+        
+        print(tab.count)
         
     }
 

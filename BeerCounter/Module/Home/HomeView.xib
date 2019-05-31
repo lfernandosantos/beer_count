@@ -52,6 +52,7 @@
                 </pickerView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3E-a9-Ouw">
                     <rect key="frame" x="24" y="517" width="366" height="34"/>
+                    <accessibility key="accessibilityConfiguration" identifier="addbtn"/>
                     <inset key="contentEdgeInsets" minX="0.0" minY="8" maxX="0.0" maxY="8"/>
                     <state key="normal" title="Add Beers"/>
                     <connections>
