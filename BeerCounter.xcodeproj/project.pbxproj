@@ -23,6 +23,10 @@
 		BA9C7063229DBEDE00B0AA3C /* Order+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9C7061229DBEDE00B0AA3C /* Order+CoreDataClass.swift */; };
 		BA9C7064229DBEDE00B0AA3C /* Order+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9C7062229DBEDE00B0AA3C /* Order+CoreDataProperties.swift */; };
 		BA9C706C22A0853400B0AA3C /* BeerCounterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9C706B22A0853400B0AA3C /* BeerCounterUITests.swift */; };
+		BEC90B3422A601F500E18D9B /* MoviesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC90B3222A601F500E18D9B /* MoviesCollectionViewCell.swift */; };
+		BEC90B3522A601F500E18D9B /* MoviesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEC90B3322A601F500E18D9B /* MoviesCollectionViewCell.xib */; };
+		BEC90B3822A603DE00E18D9B /* ThumbTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC90B3622A603DE00E18D9B /* ThumbTableViewCell.swift */; };
+		BEC90B3922A603DE00E18D9B /* ThumbTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEC90B3722A603DE00E18D9B /* ThumbTableViewCell.xib */; };
 		BED70F56229B10B1000F347A /* HomeViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED70F55229B10B1000F347A /* HomeViewInteractor.swift */; };
 		BED70F59229B5CE0000F347A /* LastBearsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED70F58229B5CE0000F347A /* LastBearsRouter.swift */; };
 /* End PBXBuildFile section */
@@ -58,6 +62,10 @@
 		BA9C706922A0853400B0AA3C /* BeerCounterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeerCounterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA9C706B22A0853400B0AA3C /* BeerCounterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerCounterUITests.swift; sourceTree = "<group>"; };
 		BA9C706D22A0853400B0AA3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEC90B3222A601F500E18D9B /* MoviesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesCollectionViewCell.swift; sourceTree = "<group>"; };
+		BEC90B3322A601F500E18D9B /* MoviesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesCollectionViewCell.xib; sourceTree = "<group>"; };
+		BEC90B3622A603DE00E18D9B /* ThumbTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbTableViewCell.swift; sourceTree = "<group>"; };
+		BEC90B3722A603DE00E18D9B /* ThumbTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThumbTableViewCell.xib; sourceTree = "<group>"; };
 		BED70F55229B10B1000F347A /* HomeViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewInteractor.swift; sourceTree = "<group>"; };
 		BED70F58229B5CE0000F347A /* LastBearsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastBearsRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,6 +117,7 @@
 		BA1AEA292297164C00E30BF1 /* BeerCounter */ = {
 			isa = PBXGroup;
 			children = (
+				BEC90B2F22A6016A00E18D9B /* Components */,
 				BA9C705A229DBC7800B0AA3C /* Database */,
 				BA0CC40C229C5FFF00767DDD /* Common */,
 				BA1AEA442298A07C00E30BF1 /* Module */,
@@ -170,6 +179,17 @@
 				BA9C706D22A0853400B0AA3C /* Info.plist */,
 			);
 			path = BeerCounterUITests;
+			sourceTree = "<group>";
+		};
+		BEC90B2F22A6016A00E18D9B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				BEC90B3222A601F500E18D9B /* MoviesCollectionViewCell.swift */,
+				BEC90B3322A601F500E18D9B /* MoviesCollectionViewCell.xib */,
+				BEC90B3622A603DE00E18D9B /* ThumbTableViewCell.swift */,
+				BEC90B3722A603DE00E18D9B /* ThumbTableViewCell.xib */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		BED70F57229B5CC9000F347A /* LastBears */ = {
@@ -265,7 +285,9 @@
 				BA1AEA3D22972DFB00E30BF1 /* HomeView.xib in Resources */,
 				BA1AEA3F2298651C00E30BF1 /* LastBears.xib in Resources */,
 				BA1AEA322297164E00E30BF1 /* Assets.xcassets in Resources */,
+				BEC90B3922A603DE00E18D9B /* ThumbTableViewCell.xib in Resources */,
 				BA1AEA302297164C00E30BF1 /* Main.storyboard in Resources */,
+				BEC90B3522A601F500E18D9B /* MoviesCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,8 +306,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA9C7064229DBEDE00B0AA3C /* Order+CoreDataProperties.swift in Sources */,
+				BEC90B3422A601F500E18D9B /* MoviesCollectionViewCell.swift in Sources */,
 				BA0CC410229C639900767DDD /* HomeView.swift in Sources */,
 				BA1AEA472298A0A200E30BF1 /* HomeViewController.swift in Sources */,
+				BEC90B3822A603DE00E18D9B /* ThumbTableViewCell.swift in Sources */,
 				BA1AEA4322989C4100E30BF1 /* HomeViewRouter.swift in Sources */,
 				BED70F59229B5CE0000F347A /* LastBearsRouter.swift in Sources */,
 				BA1AEA4122986D8B00E30BF1 /* LastBearsViewController.swift in Sources */,
